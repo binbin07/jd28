@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 说明传递参数时：传值和传引用的区别
+        // 值：基本类型--值类型
+        // 引用：复杂类型--引用类型
+
+        // 所有参数传递都是副本传递：它所传递的数据就是栈空间中存储的值
+        // 1.如果是值类型，那么栈空间中直接存储值本身
+        // 2.如果是引用类型，那么栈空间中存储它的堆空间的引用地址
+        // var age = 20
+        // console.log(age)
+        // change(age)
+        // console.log(age)
+
+        // function change(age){
+        //     age = 50
+        // }
+
+
+        var obj = {
+            name:'jack',
+            age:20
+        }
+        console.log(obj)
+
+        change(obj)
+        console.log(obj)
+
+        function change(temp){
+            temp = {}
+            temp.name = 'rose'
+            temp.age = 18
+        }
+        
+    </script>
+</body>
+</html>

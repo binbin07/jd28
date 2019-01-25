@@ -3,10 +3,12 @@
 // @import '指定less文件的路径'
 @import 'base.less';
 #header {
-    position: absolute;
+    position: fixed;
+    z-index: 99;
     width: 100%;
     display: flex;
-    background-color: #ccc; 
+    // background-color: #ccc; 
+    opacity: 1;
     // logo部分
     >.icon-logo {
         width: 0.8rem;
@@ -45,6 +47,7 @@
         color: #fff;
         text-align: center;
         width: 0.5rem;
+        font-size: .14rem;
     }
 }
 
@@ -198,7 +201,7 @@
 
 //底部
 footer {
-    position: flex;
+    position: fixed;
     bottom: 0;
     /* 设置宽度不然没有宽度 */
     width: 100%;
