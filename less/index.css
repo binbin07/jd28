@@ -1,0 +1,251 @@
+/* 在index.less文件夹里面引入公共的base.less文件 */
+/* 给所有标签都去除默认样式 */
+html {
+  /* 设置根元素大小为 26.6667vw 根元素在 375屏幕 1rem == 100px  只要把页面所有px单位缩小100倍 就是rem值 */
+  font-size: 26.6667vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* 移动端不允许网页出现横向滚动条 */
+  /* 而且页面都是全屏盛满 宽度通常100% */
+  /* 让盒模型的计算方式 固定为 设置 width 和 height 
+    如果 padding border 会把content内容挤小 */
+  /* 因为所有都要设置这个属性 放到*号里面 */
+  box-sizing: border-box;
+  /* 移动端一些能按住的元素会有一个高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+}
+/* 给body设置默认字体样式 */
+body {
+  font-family: '微软雅黑';
+  /* 移动端默认字体一般是14px */
+  font-size: 14px;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+img {
+  /* 解决图片的3px间隙问题 */
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  /* 去掉内边框 */
+  outline: 0;
+}
+/* 定义一些重复边框类名 */
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+#header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  background-color: #ccc;
+}
+#header > .icon-logo {
+  width: 0.8rem;
+  height: 0.45rem;
+  padding: 0.1rem;
+  background: url('../images/sprites.png');
+  background-position: 0 -1.1rem;
+  background-size: 2rem 2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#header > form {
+  flex: 1;
+  position: relative;
+  padding-top: 0.05rem;
+}
+#header > form .icon-search {
+  background: url('../images/sprites.png');
+  background-position: -0.6rem -1.1rem;
+  background-size: 2rem 2rem;
+  position: absolute;
+  left: 0.1rem;
+  top: 0.14rem;
+  width: 0.2rem;
+  height: 0.2rem;
+}
+#header > form input {
+  border-radius: 17px;
+  width: 100%;
+  height: 0.35rem;
+  padding-left: 0.3rem;
+  font-size: .14rem;
+}
+#header .login {
+  line-height: 0.45rem;
+  color: #fff;
+  text-align: center;
+  width: 0.5rem;
+}
+#slide img {
+  width: 100%;
+}
+#nav {
+  padding: 0.1rem;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25%;
+}
+#nav ul li a {
+  display: block;
+  text-align: center;
+}
+#nav ul li a img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+#nav ul li a p {
+  font-size: .12rem;
+  margin: 0.05rem 0;
+}
+#main {
+  padding: 0.1rem;
+  background-color: #ccc;
+}
+#main .seckill {
+  background-color: #fff;
+  box-shadow: 0 0 0.02rem 0.01rem hotpink;
+}
+#main .seckill .title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.3rem;
+}
+#main .seckill .title .left {
+  display: flex;
+}
+#main .seckill .title .left .seckill-icon {
+  width: 0.2rem;
+  height: 0.25rem;
+  margin-left: 0.05rem;
+}
+#main .seckill .title .left .seckill-name {
+  color: #de181b;
+  margin-left: 0.05rem;
+}
+#main .seckill .title .left .seckill-downtime {
+  margin-left: 0.05rem;
+}
+#main .seckill .title .left .seckill-downtime span:not(:nth-child(3n)) {
+  background-color: #000;
+  display: inline-block;
+  width: 0.15rem;
+  line-height: 0.15rem;
+  color: #fff;
+  text-align: center;
+}
+#main .seckill .title .right .more {
+  margin-right: 0.05rem;
+}
+#main .seckill .content ul {
+  display: flex;
+}
+#main .seckill .content ul li {
+  width: 33.33%;
+  /* 相邻后面所有兄弟选择器 */
+}
+#main .seckill .content ul li a {
+  display: block;
+  text-align: center;
+}
+#main .seckill .content ul li a img {
+  width: 1.1rem;
+}
+#main .seckill .content ul li a span {
+  display: block;
+  font-size: 0.12rem;
+  color: #de181b;
+}
+#main .seckill .content ul li a del {
+  display: block;
+  color: #ccc;
+  font-size: 0.12rem;
+}
+#main .seckill .content ul li ~ li {
+  border-left: 0.01rem solid #ccc;
+}
+#main .jd-market {
+  background-color: #fff;
+  box-shadow: 0px 0px 0.02rem 0.01rem hotpink;
+  margin-top: 0.1rem;
+}
+#main .jd-market .title {
+  line-height: 0.3rem;
+}
+#main .jd-market .title h4 {
+  padding-left: 0.3rem;
+  position: relative;
+  font-weight: normal;
+  font-size: 0.12rem;
+}
+#main .jd-market .title h4::before {
+  content: '';
+  background-color: #de181b;
+  width: 0.04rem;
+  height: 0.16rem;
+  position: absolute;
+  left: 0.2rem;
+  top: 0.07rem;
+}
+#main .jd-market .content {
+  display: flex;
+}
+#main .jd-market .content .left {
+  width: 50%;
+}
+#main .jd-market .content .left a {
+  display: block;
+}
+#main .jd-market .content .left a img {
+  width: 100%;
+}
+#main .jd-market .content .right {
+  width: 50%;
+}
+#main .jd-market .content .right a {
+  display: block;
+}
+#main .jd-market .content .right a img {
+  width: 100%;
+}
+footer {
+  position: flex;
+  bottom: 0;
+  /* 设置宽度不然没有宽度 */
+  width: 100%;
+  background-color: #d51433;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  width: 20%;
+}
+footer ul li a {
+  display: block;
+}
+footer ul li a img {
+  width: 0.65rem;
+}
